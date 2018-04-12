@@ -1,3 +1,7 @@
+#Dico de Robot
+#les pseudos sont associés à un Robot
+#si
+
 
 from socket import *
 import sys
@@ -6,6 +10,11 @@ import Robot
 #DEFINITION DES METHODES
 
 def CONNECT(port, nom) :
+  sock.connect(nom, port)
+  for cle in dico_robot:
+  	if cle == nom:
+
+  dico_robot["nom"]=
   #Fonction connect
   #Verifier si le nom du robot est libre ou pas
   #retourne la map
@@ -22,6 +31,7 @@ def	QUIT():
   #déconnecte user
 def GETATPOS(abscisse, ordonee):
 def	MOVETO(abscisse, ordonee):
+
 def	APPSTATUS():
 def HELP():
 	return "Connect, Init, pause, play,	setpseudo, transfer, lastupdate, getmap, quit, getatpos,moveto, appstatus";
@@ -35,7 +45,7 @@ if len(sys.argv) != 2:
 
 TAILLE_TAMPON = 256
 
-sock = socket(AF_INET, SOCK_DGRAM)
+sock = socket(AF_INET, SOCK_STREAM)
 
 with open("SpaceX.log", "w") as log: #Creation ou ecrasement du fichier log
 	log.write(SpaceXlog() + "Serveur started\n")
@@ -46,7 +56,7 @@ sock.bind(('', int(sys.argv[1])))
 log = open("SpaceX.log", "a") # ouverture du fichier log
 
 print("Serveur en attente sur le port " + sys.argv[1], file=sys.stderr)
-log.write(SpaceX.log() + "Listen on :" + sys.argv[1] + "\n")
+log.write(SpaceXlog() + "Listen on :" + sys.argv[1] + "\n")
 while True:
 	try:
 		log = open("SpaceX.log", "a") # ouverture du fichier log
@@ -62,40 +72,40 @@ while True:
 		# Operations
 		if commande == "CONNECT":
 			CONNECT()
-		if commande == "INIT":
+		elif commande == "INIT":
 			INIT()
-		if commande == "PAUSE":
-			pass
-		if commande == "SETPSEUDO":
-			pass
-		if commande == "TRANSFER":
-			pass
-		if commande == "LASTUPDATE":
-			pass
-	    if commande == "GETMAP":
-		    pass
-	    if commande == "QUIT":
-		    pass
-	    if commande == "GETATPOS":
-		    pass
-	    if commande == "APPSTATUS":
-		    pass
-	    if commande == "MOVETO":
-		    pass
-
-
+		elif commande == "PAUSE":
+			PAUSE()
+		elif commande == "SETPSEUDO":
+			SETPSEUDO()
+		elif commande == "TRANSFER":
+			TRANSFER()
+		elif commande == "LASTUPDATE":
+			LASTUPDATE()
+	    elif commande == "GETMAP":
+		    GETMAP()
+	    elif commande == "QUIT":
+		    QUIT()
+	    elif commande == "GETATPOS":
+		    GETATPOS()
+	    elif commande == "APPSTATUS":
+		    APPSTATUS()
+	    elif commande == "MOVETO":
+		    MOVETO()
+		else :
+			commande = "Commande introuvable"
 
 
 		# Construction de la reponse
 
-		log.write(datelog() + "Received " + cmd + " from " + ip_client+"\n")
+		log.write(SpaceXlog() + "Received " + cmd + " from " + ip_client+"\n")
 		print(cmd)
 
 		# Envoi de la reponse au client
 		sock.sendto(reponse.encode(), adr_client)
 	except KeyboardInterrupt: break
 sock.close()
-log.write(datelog() + "Server stopped...")
+log.write(SpaceXlog() + "Server stopped...")
 log.close()
 print("Arret du serveur", file=sys.stderr)
 sys.exit(0)
