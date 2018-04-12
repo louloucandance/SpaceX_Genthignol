@@ -24,7 +24,6 @@ def	MOVETO(abscisse, ordonee):
 def	APPSTATUS():
 ########################################################################
 
-
 if len(sys.argv) != 2:
 	print(f"Usage: {sys.argv[0]} <port>", file=sys.stderr)
 	sys.exit(1)
