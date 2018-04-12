@@ -1,0 +1,1624 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>850</width>
+    <height>783</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>10</y>
+      <width>201</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="status">
+     <item>
+      <widget class="QPushButton" name="PAUSE">
+       <property name="text">
+        <string>PAUSE</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="PLAY">
+       <property name="text">
+        <string>PLAY</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="QUIT">
+       <property name="text">
+        <string>DISCONNECT</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>Name : </string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="Pseudo"/>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QPushButton" name="PSEUDO">
+       <property name="text">
+        <string>Valider le nouveau pseudo</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QToolButton" name="moveUp">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>630</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>↑</string>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="moveLeft">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>670</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>←</string>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="moveRight">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>670</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>→</string>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="moveDown">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>710</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>↓</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>10</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_9_0"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>70</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_8_0"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_4">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>130</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_7_0"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_11">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>190</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_6_0"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_12">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>250</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_5_0"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_5">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>310</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_4_0"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_6">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>370</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_3_0"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_7">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>430</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_2_0"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_8">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>490</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_1_0"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_9">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>550</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_0_0"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_10">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>430</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_2_1"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_13">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>190</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_6_1"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_14">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>490</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_1_1"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_15">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>550</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_0_1"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>70</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_8_1"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_16">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>310</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_4_1"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_17">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>370</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_3_1"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_18">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>130</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_7_1"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_19">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>10</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_9_1"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_20">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>250</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_5_1"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_21">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>430</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_2_2"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_22">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>190</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_6_2"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_23">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>490</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_1_2"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_24">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>550</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_0_2"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_25">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>70</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_8_2"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_26">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>310</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_4_2"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_27">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>370</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_3_2"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_28">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>130</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_7_2"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_29">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>10</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_9_2"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_30">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>250</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_5_3"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_31">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>310</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_4_3"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_32">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>130</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_7_5"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_33">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>190</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_6_3"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_34">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>550</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_0_4"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_35">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>10</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_9_3"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_36">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>430</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_2_4"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_37">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>310</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_4_5"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_38">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>130</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_7_4"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_39">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>190</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_6_4"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_40">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>190</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_6_5"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_41">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>250</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_5_4"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_42">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>370</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_3_4"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_43">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>250</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_5_5"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_44">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>130</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_7_3"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_45">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>370</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_3_5"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_46">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>10</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_9_4"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_47">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>550</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_0_5"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_48">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>250</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_5_6"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_49">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>70</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_8_4"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_50">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>310</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_4_4"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_51">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>10</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_9_5"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_52">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>490</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_1_4"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_53">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>70</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_8_5"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_54">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>430</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_2_3"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_55">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>490</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_1_3"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_56">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>70</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_8_3"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_57">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>490</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_1_5"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_58">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>550</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_0_3"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_59">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>430</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_2_5"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_60">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>370</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_3_3"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_61">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>310</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_4_6"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_62">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>130</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_7_8"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_63">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>190</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_6_6"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_64">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>550</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_0_7"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_65">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>10</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_9_6"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_66">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>430</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_2_7"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_67">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>310</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_4_10"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_68">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>130</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_7_7"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_69">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>190</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_6_7"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_70">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>190</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_6_8"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_71">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>250</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_5_7"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_72">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>370</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_4_7"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_73">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>250</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_5_8"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_74">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>130</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_7_6"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_75">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>370</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_3_8"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_76">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>10</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_9_7"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_77">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>550</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_0_8"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_78">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>250</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_5_9"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_79">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>70</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_8_7"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_80">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>310</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_4_8"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_81">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>10</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_9_8"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_82">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>490</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_1_7"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_83">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>70</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_8_8"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_84">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>430</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_2_6"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_85">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>490</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_1_6"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_86">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>70</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_8_6"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_87">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>490</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_1_8"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_88">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>550</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_0_6"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_89">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>430</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_2_8"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_90">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>370</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_3_6"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_91">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>310</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_4_9"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_93">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>190</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_6_9"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_95">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>10</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_9_9"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_101">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>250</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_5_10"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_104">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>130</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_7_9"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_114">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>430</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_2_9"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_115">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>490</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_1_9"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_116">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>70</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_8_9"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_118">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>550</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_0_9"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_120">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>370</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gril_3_9"/>
+   </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>55</y>
+      <width>611</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>110</y>
+      <width>611</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_3">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>170</y>
+      <width>611</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_4">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>230</y>
+      <width>611</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_5">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>290</y>
+      <width>611</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_6">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>350</y>
+      <width>611</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_7">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>410</y>
+      <width>611</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_9">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>470</y>
+      <width>611</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_8">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>530</y>
+      <width>611</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_10">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>0</y>
+      <width>51</width>
+      <height>611</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_11">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>0</y>
+      <width>51</width>
+      <height>611</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_12">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>0</y>
+      <width>51</width>
+      <height>611</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_13">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>0</y>
+      <width>51</width>
+      <height>611</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_14">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>0</y>
+      <width>51</width>
+      <height>611</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_15">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>0</y>
+      <width>51</width>
+      <height>611</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_16">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>0</y>
+      <width>51</width>
+      <height>611</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_17">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>0</y>
+      <width>51</width>
+      <height>611</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_18">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>0</y>
+      <width>51</width>
+      <height>611</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>190</y>
+      <width>201</width>
+      <height>291</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QPushButton" name="AppStatus">
+       <property name="text">
+        <string>App status</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTableView" name="ShowAppStatus"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_8">
+    <property name="geometry">
+     <rect>
+      <x>19</x>
+      <y>620</y>
+      <width>301</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_8">
+     <item>
+      <widget class="QPushButton" name="GETMAP">
+       <property name="text">
+        <string>Get robots position</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTextBrowser" name="ShowGetMap"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_9">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>620</y>
+      <width>301</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_9">
+     <item>
+      <widget class="QPushButton" name="lastUpdate">
+       <property name="text">
+        <string>Last Update</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTextBrowser" name="showLastUpdate"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="moveXY">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>600</y>
+      <width>201</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Valider le déplacement</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>540</y>
+      <width>201</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>X :</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="x"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>570</y>
+      <width>201</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_4">
+     <item>
+      <widget class="QLabel" name="label_5">
+       <property name="text">
+        <string>Y : </string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="y"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="blabla">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>500</y>
+      <width>221</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Enter coordinates or use the</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="blabla_2">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>520</y>
+      <width>231</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>arrows to moove your robot</string>
+    </property>
+   </widget>
+   <widget class="Line" name="line_19">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>490</y>
+      <width>118</width>
+      <height>3</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
