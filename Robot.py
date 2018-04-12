@@ -24,3 +24,17 @@ class Robot:
 
     def move_robot(self, x, y):
         self.set_coordinates=(x,y)
+
+	def get_coordinates(self):
+		return self.coordinates
+		
+	def get_state(self):
+		return self.state
+		
+	def get_name(self):
+		return self.name
+		
+	def get_resources(self):
+		return self.resources
+		
+	
