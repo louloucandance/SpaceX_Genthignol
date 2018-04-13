@@ -1,11 +1,12 @@
-#Dico de Robot
-#les pseudos sont associés à un Robot
-#si
-
-
 from socket import *
-import sys
-import Robot
+from datetime import *
+from calendar import *
+import sys, threading, os, os.path, re
+
+
+#DEFINITION DES METHODES
+#DICTIONNAIRE DES ROBOTS
+dico_robot = {}
 
 #DEFINITION DES METHODES
 
@@ -13,30 +14,89 @@ def CONNECT(port, nom) :
   sock.connect(nom, port)
   for cle in dico_robot:
   	if cle == nom:
-
-  dico_robot["nom"]=
+		if dico_robot[nom].get_state() == "DISCONNECTED":
+			return "\n101 : Connection succeed" 
+		return "\n201 : Robot name taken"
+	
+	
+  
   #Fonction connect
   #Verifier si le nom du robot est libre ou pas
   #retourne la map
-def INIT():
+def INIT(x, y):
+	
+	
 def	PAUSE():
+	
 def	PLAY():
+	
 def	SETPSEUDO(nom):
+	
 def TRANSFER(nom):
+	
 def	LASTUPDATE():
+	
   #retourne la date de la derniere update
 def	GETMAP():
+	rmap = []
+	for r in dico_robot:
+		rmap += r.get_position
+		
   #retourne la position du dernier robot
-def	QUIT():
-  #déconnecte user
+
+  #dÃ©connecte user
 def GETATPOS(abscisse, ordonee):
+	
 def	MOVETO(abscisse, ordonee):
 
 def	APPSTATUS():
+	
 def HELP():
-	return "Connect, Init, pause, play,	setpseudo, transfer, lastupdate, getmap, quit, getatpos,moveto, appstatus";
-########################################################################
-
+	return "Connect, Init, pause, play,	setpseudo, transfer, lastupdate, getmap, quit, getatpos, moveto, appstatus";
+	
+	
+def rep(client, adr):
+	cmd = ""
+	while cmd != "QUIT":
+		print(f"RequÃªte provenant de {adr[0]}.",
+					file=sys.stderr)			
+					
+			# Construction de la rÃ©ponse
+		cmd = client.recv(TAILLE_TAMPON).decode().upper()
+			
+		if cmd == "CONNECT":
+		 	CONNECT()
+		elif cmd == "INIT":
+			INIT()
+		elif cmd == "PAUSE":
+			PAUSE()
+		elif cmd == "SETPSEUDO":
+			SETPSEUDO()
+		elif cmd == "TRANSFER":
+			TRANSFER()
+		elif cmd == "LASTUPDATE":
+			LASTUPDATE()
+	    elif cmd == "GETMAP":
+		    GETMAP()
+	    elif cmd == "QUIT":
+		    QUIT()
+	    elif cmd == "GETATPOS":
+		    GETATPOS()
+	    elif cmd == "APPSTATUS":
+		    APPSTATUS()
+	    elif cmd == "MOVETO":
+		    MOVETO()		
+		elif cmd != "QUIT" :
+			reponse = "200 : Erreur : commande erronÃ©e : " + cmd
+			
+			
+		log.write(datelog() + "Received " + cmd + " from " +adr[0]+"\n")
+		print(cmd)
+		client.send(reponse.encode())	
+	
+########
+	
+	
 if len(sys.argv) != 2:
 	print(f"Usage: {sys.argv[0]} <port>", file=sys.stderr)
 	sys.exit(1)
@@ -44,68 +104,36 @@ if len(sys.argv) != 2:
 #logging.basicConfig(filename = './serveurDate.log', level = logging.INFO)
 
 TAILLE_TAMPON = 256
+today = datetime.now()
 
-sock = socket(AF_INET, SOCK_STREAM)
+sock_server = socket()
+sock_server.bind(("", int(sys.argv[1])))
+sock_server.listen(10)
 
-with open("SpaceX.log", "w") as log: #Creation ou ecrasement du fichier log
-	log.write(SpaceXlog() + "Serveur started\n")
+with open("serveurDate.log", "w") as log: #Creation ou ecrasement du fichier log
+	log.write( datelog() + "Serveur started\n")
+	
 
-# Liaison de la socket a toutes les IP possibles de la machine
-sock.bind(('', int(sys.argv[1])))
-
-log = open("SpaceX.log", "a") # ouverture du fichier log
+log = open("serveurDate.log", "a") # ouverture du fichier log
 
 print("Serveur en attente sur le port " + sys.argv[1], file=sys.stderr)
-log.write(SpaceXlog() + "Listen on :" + sys.argv[1] + "\n")
+log.write( datelog() + "Listen on :" + sys.argv[1] + "\n")
 while True:
 	try:
-		log = open("SpaceX.log", "a") # ouverture du fichier log
-
-		# Recuperation de la requete du client
-		requete = sock.recvfrom(TAILLE_TAMPON)
-		# Extraction du message et de l'adresse sur le client
-		(mess, adr_client) = requete
-		ip_client, port_client = adr_client
-		print(f"Requete provenant de {ip_client} par {port_client}. Longueur = {len(mess)}", file=sys.stderr)
-		commande=mess.decode().upper()
-
-		# Operations
-		if commande == "CONNECT":
-			CONNECT()
-		elif commande == "INIT":
-			INIT()
-		elif commande == "PAUSE":
-			PAUSE()
-		elif commande == "SETPSEUDO":
-			SETPSEUDO()
-		elif commande == "TRANSFER":
-			TRANSFER()
-		elif commande == "LASTUPDATE":
-			LASTUPDATE()
-	    elif commande == "GETMAP":
-		    GETMAP()
-	    elif commande == "QUIT":
-		    QUIT()
-	    elif commande == "GETATPOS":
-		    GETATPOS()
-	    elif commande == "APPSTATUS":
-		    APPSTATUS()
-	    elif commande == "MOVETO":
-		    MOVETO()
-		else :
-			commande = "Commande introuvable"
-
-
-		# Construction de la reponse
-
-		log.write(SpaceXlog() + "Received " + cmd + " from " + ip_client+"\n")
-		print(cmd)
-
-		# Envoi de la reponse au client
-		sock.sendto(reponse.encode(), adr_client)
+		log = open("serveurDate.log", "a") # ouverture du fichier log
+		sock_client, adr_client = sock_server.accept()
+		print("Connexion de ".format(adr_client))
+		threading.Thread(target=rep, args=(sock_client, adr_client,)) \
+				 .start()
+				 
+		
 	except KeyboardInterrupt: break
-sock.close()
-log.write(SpaceXlog() + "Server stopped...")
+	
+
+
+
+sock_server.close()
+log.write(datelog() + "Server stopped...")
 log.close()
-print("Arret du serveur", file=sys.stderr)
+print("ArrÃªt du serveur", file=sys.stderr)
 sys.exit(0)

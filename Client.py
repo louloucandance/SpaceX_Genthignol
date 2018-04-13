@@ -4,19 +4,27 @@ import sys
 if len(sys.argv) != 3:
 	print(f"Usage: {sys.argv[0]} <ip> <port>", file=sys.stderr)
 	sys.exit(1)
-
+	
 TAILLE_TAMPON = 256
+cmd =""
 
-while True :
-	with socket(AF_INET, SOCK_DGRAM) as sock :
-		# Remarque : pas besoin de bind car le port local est choisi par le système
-		mess = input("Entrez votre commande : ")
-		if mess == "quit" :
-			print("Arret du dialogue avec le serveur...")
-			sys.exit(0)
+with socket() as client:
+	#Appel de sa mÃÂ©thode connect()
+	try:
+		client.connect((sys.argv[1], int(sys.argv[2])))
+	except (error):
+		print ("Connexion au server impossible \nFin du programme")
+		sys.exit(1)
+	#Check le pseudo du client
+	
+	#client.send(str(sys.argv[1]).encode())
+	
 
-		# Envoi de la requête au serveur (ip, port) après encodage de str en bytes
-		sock.sendto(mess.encode(), (sys.argv[1], int(sys.argv[2])))
-		# Réception de la réponse du serveur et décodage de bytes en str
-		reponse, _ = sock.recvfrom(TAILLE_TAMPON)
-		print("Réponse = " + reponse.decode())
+	while cmd != "quit":
+		cmd = input("Entrez une commande (help pour la liste, quit pour quitter) : ")
+		#if cmd != "quit":
+		client.send(cmd.encode())
+		messageFromServer = client.recv(TAILLE_TAMPON).decode()
+		print(messageFromServer);
+		
+	print('Deconnexion.')
